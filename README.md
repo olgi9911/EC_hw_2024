@@ -2,16 +2,16 @@
 ## Latest Announcement
 The release of testcase/*.out files will be delayed. 
 
-Expected upload date: March 24
+Expected upload date: March 24.
 
 **If you encounter any issues or have any questions regarding this repository, please don't hesitate to open an issue!**
 ## Sample Code Usage
-Clone this repository to local,
+Clone this repository to your local machine,
 ```bash
 git clone https://github.com/fffchameleon/EC_hw_2024.git
 cd EC_hw_2024
 ```
-If you will write this assignment with C++,
+If you choose to write this assignment in C++,
 ```bash
 cd cpp/ && make
 ./main -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100 -d
@@ -21,7 +21,7 @@ If you prefer to use Python, use,
 cd py
 python3 main.py -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 500 -d
 ```
-Both should print the following,
+Both commands should output the following information,
 ```
 -------------------------------------------
 |Parameter           |Value               |
@@ -96,6 +96,10 @@ Then just print 50.5991.
   In `testcase/*.out`, the first line contains two values: the first value is the mean best fitness running by TAs with 100 trials, and the second value is the standard deviation.
   
   If your fitness is within two standard deviations, it is considered correct.
+#### Judger Usuage
+Place your executable and the judger in the same directory, and run them using `python3 judger.py`. 
+
+Note: The testcase/*.out files have not yet been released, so please refrain from using the python3 judger.py command until they are available.
 ## Grading 
 - Coding (30%)
   - Simple test: each failed testcase deducts 1 point (10%)
