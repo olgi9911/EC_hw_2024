@@ -1,4 +1,6 @@
 # EC_hw_2024
+**Latest Announcement: The release of testcase/*.out files will be delayed.**
+
 **If you encounter any issues or have any questions regarding this repository, please don't hesitate to open an issue!**
 ## Sample Code Usage
 Clone this repository to local,
@@ -84,8 +86,8 @@ The following context is `01.in`.
 
 Please directly print the best fitness of the final generation.
 
-For example, with `01.in`, suppose I finally find the best solution `421 421 421 421 421 421 421 421 421 421`, and the fitness of my solution is 0.00145984.
-Then just print 0.00145984.
+For example, with `01.in`, suppose I finally find the best solution `430 420 419 432 426 419 415 417 414 429`, and the fitness of my solution is 50.5991.
+Then just print 50.5991.
 - Sample output:
 
   In `testcase/*.out`, the first line contains two values: the first value is the mean best fitness running by TAs with 100 trials, and the second value is the standard deviation.
@@ -102,4 +104,6 @@ Then just print 0.00145984.
     - Compilation failure with Makefile (-5)
     - Not following input/output format (-5)
     - Incorrect filename (-3)
+      - executable file: main or main.py
+      - report: $student_id$_report.pdf (e.g. 112062500_report.pdf)
 - Report (70%)
