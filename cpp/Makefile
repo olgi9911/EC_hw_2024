@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = --std=c++17 -O3 -Wall
 SRC = main.cpp parser.cpp ga.cpp
-TARGET = hw_sch
+TARGET = main
 
 all: $(TARGET)
 

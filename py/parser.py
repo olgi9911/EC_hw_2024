@@ -55,7 +55,7 @@ def parse_arguments():
     parser.add_argument('-u', '--uniform_crossover', type=str_to_bool, default=False, help='The crossover method using uniform crossover (1) or not (0). If not, then for binary GA, it will use 2-point crossover and for real-valued GA will use whole arithmetic crossover (default: 0)')
     parser.add_argument('-c', '--pc', type=float, default=0.9, help='Probability for the crossover (default: 0.9)')
     parser.add_argument('-m', '--pm', type=float, default=0.1, help='Probability for the mutation (default: 0.1)')
-    parser.add_argument('-g', '--generations', type=int, default=100, help='Max number of generations to terminate (default: 100)')
+    parser.add_argument('-g', '--generations', type=int, default=500, help='Max number of generations to terminate (default: 500)')
     parser.add_argument('-d', '--debug', action='store_true', help='Turn on debug prints (default: false)')
 
     args = parser.parse_args()

@@ -28,7 +28,7 @@ void usage(const char* progname) {
               << "  -u  --uniform_crossover <BOOL> The crossover method using uniform crossover (1) or not (0). If not, then for binary GA, it will use 2-point crossover and for real-valued GA will use whole arithmetic crossover (default: 0) \n"
               << "  -c  --pc <DOUBLE>              Probability for the crossover (default: 0.9) \n"
               << "  -m  --pm <DOUBLE>              Probability for the mutation (default: 0.1)  \n"
-              << "  -g  --generations <INT>        Max number of generations to terminate (default: 100) \n"
+              << "  -g  --generations <INT>        Max number of generations to terminate (default: 500) \n"
               << "  -d  --debug <BOOL>             Turn on debug prints (default: false)\n"
               << "  -?  --help                     This message\n";
     return;

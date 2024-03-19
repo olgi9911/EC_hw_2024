@@ -16,7 +16,7 @@ public:
     string crossover_method = "2-point";
     float cross_prob = 0.9;
     float mut_prob = 0.1;
-    int num_generations = 100;
+    int num_generations = 500;
     bool debug = false;
 
     void print_configuration() const {
