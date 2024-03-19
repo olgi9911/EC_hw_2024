@@ -9,12 +9,12 @@ cd EC_hw_2024
 If you will write this assignment with C++,
 ```bash
 cd cpp/ && make
-./hw_sch -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100 -d
+./main -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100 -d
 ```
 If you prefer to use Python, use,
 ```bash
 cd py
-python3 main.py -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100 -d
+python3 main.py -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 500 -d
 ```
 Both should print the following,
 ```
@@ -28,7 +28,7 @@ Both should print the following,
 |crossover_method    |2-point             |
 |cross_prob          |0.9                 |
 |mut_prob            |0.1                 |
-|num_generations     |100                 |
+|num_generations     |500                 |
 -------------------------------------------
 0.00145984
 ```
@@ -37,7 +37,7 @@ We provide sample parser code for two languages (C++/Python).
 
 You can write your own parser, but it must be capable of accepting the following parameters, and your program must provide at least the following 8 options. 
 
-p.s. You may add more options to make your experiments more convenient, but adding more options will not affect your grade.
+p.s. You may add more options to make your experiments more convenient and complete.
 
 | Options       | Description | Default |
 | ------------- | ----------- | ------- |
@@ -51,11 +51,11 @@ p.s. You may add more options to make your experiments more convenient, but addi
 | `-d, --debug`        | Turn on debug prints | false |
 
 ### Input
-For example, with testcase/01.in, our judger will execute your executable file + the first line of configuration in testcase/*.in.
+For example, with `testcase/01.in`, our judger will execute your executable file + the first line of configuration in `testcase/*.in`.
 
-If written in C++, please remember to upload a Makefile, and the compiled executable should be named hw_sch.
+If written in C++, please remember to upload a Makefile, and the compiled executable should be named main.
 ```bash
-./hw_sch -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100
+./main -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100
 ```
 If written in Python, your main.py file will be executed directly.
 ```bash
@@ -80,23 +80,22 @@ The following context is `01.in`.
 -------------------------------------------
 ```
 ### Output
-Please directly print the fitness of the final generation. 
+**Remember, when uploading your code, ensure that your code only print the configuration table when -d, --debug is added.**
 
-**Remember, when uploading your code, ensure that your code does not print the configuration table without -d, --debug.**
+Please directly print the best fitness of the final generation.
 
 For example, with `01.in`, suppose I finally find the best solution `421 421 421 421 421 421 421 421 421 421`, and the fitness of my solution is 0.00145984.
 Then just print 0.00145984.
 - Sample output:
-
-  In `testcase/*.out`, the first line contains two values: the first value is the sample fitness, and the second value is the standard deviation.
-  If your fitness is within three standard deviations, it is considered correct.
+  In `testcase/*.out`, the first line contains two values: the first value is the mean best fitness running by TAs with 100 trials, and the second value is the standard deviation.
+  If your fitness is within two standard deviations, it is considered correct.
 ## Grading 
 - Coding (30%)
-  - Simple test: each failed testcase deducts 1 point (15)
-  - Parent Selection (-2)
-  - Crossover (-7)
-  - Mutation (-4)
-  - Survivor Selection (-2)
+  - Simple test: each failed testcase deducts 1 point (10%)
+  - Parent Selection (3%)
+  - Crossover (8%)
+  - Mutation (6%)
+  - Survivor Selection (3%)
   - Penalty
     - Compilation failure with Makefile (-5)
     - Not following input/output format (-5)
