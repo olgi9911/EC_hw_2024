@@ -1,6 +1,6 @@
 # EC_hw_2024
 ## Latest Announcement
-The release of testcase/*.out files will be delayed. 
+The release of `testcase/*.out` files will be delayed. 
 
 Expected upload date: March 24.
 
@@ -93,7 +93,7 @@ For example, with `01.in`, suppose I finally find the best solution `430 420 419
 Then just print 50.5991.
 - Sample output:
 
-  In `testcase/*.out`, the first line contains two values: the first value is the mean best fitness running by TAs with 100 trials, and the second value is the standard deviation.
+  In `testcase/*.out`, the first line contains two values: the first value is the mean best fitness running by TAs with 120 trials, and the second value is the standard deviation.
   
   If your fitness is within two standard deviations, it is considered correct.
 #### Judger Usuage
