@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
         config.print_configuration();
     }
     // TODO: write your GA program
-    // GA(config);
+    GA(config);
     
     return 0;
 }
