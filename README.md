@@ -87,7 +87,9 @@ Please directly print the best fitness of the final generation.
 For example, with `01.in`, suppose I finally find the best solution `421 421 421 421 421 421 421 421 421 421`, and the fitness of my solution is 0.00145984.
 Then just print 0.00145984.
 - Sample output:
+
   In `testcase/*.out`, the first line contains two values: the first value is the mean best fitness running by TAs with 100 trials, and the second value is the standard deviation.
+  
   If your fitness is within two standard deviations, it is considered correct.
 ## Grading 
 - Coding (30%)
