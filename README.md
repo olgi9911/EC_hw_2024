@@ -1,4 +1,5 @@
 # EC_hw_2024
+**If you encounter any issues or have any questions regarding this repository, please don't hesitate to open an issue!**
 ## Sample Code Usage
 Clone this repository to local,
 ```bash
@@ -29,7 +30,7 @@ Both should print the following,
 |mut_prob            |0.1                 |
 |num_generations     |100                 |
 -------------------------------------------
-421 421 421 421 421 421 421 421 421 421
+0.00145984
 ```
 ## Input/Output Format
 We provide sample parser code for two languages (C++/Python). 
@@ -60,7 +61,9 @@ If written in Python, your main.py file will be executed directly.
 ```bash
 python3 ./main.py -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100
 ```
-The following context is `01.in`. The first line contains the parameters we will use for testing, followed by a debug print table. If you do not include -d or --debug, it will not print.
+The following context is `01.in`. 
+1. The first line contains the parameters we will use for testing
+2. The second line is a configuration table. If you do not use `-d` or `--debug`, it will not be printed.
 ```
 -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100
 -------------------------------------------
@@ -77,20 +80,25 @@ The following context is `01.in`. The first line contains the parameters we will
 -------------------------------------------
 ```
 ### Output
-Please directly print all $x_i$ found by the GA according to the number of dimensions. 
-
-For example, with `01.in`, the dimension is 10, so the output should be 10 $x_i$ values separated by spaces.
+Please directly print the fitness of the final generation. 
 
 **Remember, when uploading your code, ensure that your code does not print the configuration table without -d, --debug.**
-- Sample output: `01.out`
-  In `testcase/*.out`, the first line is the sample output. Your code-generated output will be compared with this sample output to calculate the RMSE.
-  If the RMSE is within a reasonable range (indicated on the second line of *.out), it is considered correct.
-  ```
-  421 421 421 421 421 421 421 421 421 421
-  rmse: 10
-  ```
-## Grading
-- Compilation failure with Makefile (-5)
-- Not following input/output format (-5)
-- Incorrect filename (-3)
-- Each failed testcase deducts 1 point
+
+For example, with `01.in`, suppose I finally find the best solution `421 421 421 421 421 421 421 421 421 421`, and the fitness of my solution is 0.00145984.
+Then just print 0.00145984.
+- Sample output:
+
+  In `testcase/*.out`, the first line contains two values: the first value is the sample fitness, and the second value is the standard deviation.
+  If your fitness is within three standard deviations, it is considered correct.
+## Grading 
+- Coding (30%)
+  - Simple test: each failed testcase deducts 1 point (15)
+  - Parent Selection (-2)
+  - Crossover (-7)
+  - Mutation (-4)
+  - Survivor Selection (-2)
+  - Penalty
+    - Compilation failure with Makefile (-5)
+    - Not following input/output format (-5)
+    - Incorrect filename (-3)
+- Report (70%)
