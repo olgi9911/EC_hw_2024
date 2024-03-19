@@ -1,5 +1,8 @@
 # EC_hw_2024
-**Latest Announcement: The release of testcase/*.out files will be delayed.**
+## Latest Announcement
+The release of testcase/*.out files will be delayed. 
+
+Expected upload date: March 24
 
 **If you encounter any issues or have any questions regarding this repository, please don't hesitate to open an issue!**
 ## Sample Code Usage
