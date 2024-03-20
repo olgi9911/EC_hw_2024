@@ -14,7 +14,7 @@ cd EC_hw_2024
 If you choose to write this assignment in C++,
 ```bash
 cd cpp/ && make
-./main -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100 -d
+./main -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 500 -d
 ```
 If you prefer to use Python, use,
 ```bash
@@ -60,17 +60,17 @@ For example, with `testcase/01.in`, our judger will execute your executable file
 
 If written in C++, please remember to upload a Makefile, and the compiled executable should be named main.
 ```bash
-./main -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100
+./main -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 500
 ```
 If written in Python, your main.py file will be executed directly.
 ```bash
-python3 ./main.py -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100
+python3 ./main.py -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 500
 ```
 The following context is `01.in`. 
 1. The first line contains the parameters we will use for testing
 2. The second line is a configuration table. If you do not use `-d` or `--debug`, it will not be printed.
 ```
--n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 100
+-n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 500
 -------------------------------------------
 |Parameter           |Value               |
 -------------------------------------------
@@ -81,7 +81,7 @@ The following context is `01.in`.
 |crossover_method    |2-point             |
 |cross_prob          |0.9                 |
 |mut_prob            |0.1                 |
-|num_generations     |100                 |
+|num_generations     |500                 |
 -------------------------------------------
 ```
 ### Output
@@ -112,5 +112,5 @@ Note: The testcase/*.out files have not yet been released, so please refrain fro
     - Not following input/output format (-5)
     - Incorrect filename (-3)
       - executable file: main or main.py
-      - report: $student_id$_report.pdf (e.g. 112062500_report.pdf)
+      - report: report.pdf
 - Report (70%)
