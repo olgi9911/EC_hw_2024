@@ -34,7 +34,7 @@ def test_student_code(test_input_file, test_output_file, executable):
         # print(f"Test {test_input_file}: {result} (Calculated Mean: {calculated_mean}, Expected Mean: {expected_mean}, Std Dev: {expected_std_dev})")
     print(result)
 
-executable = ".main" if os.path.exists("./main") else "python3 main.py"
+executable = "./main" if os.path.exists("./main") else "python3 main.py"
 
 for i in range(1, 11):
     test_input_file = f"testcase/{i:02d}.in"
