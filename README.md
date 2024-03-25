@@ -2,7 +2,7 @@
 **If you encounter any issues or have any questions regarding this repository, please don't hesitate to open an issue!**
 ## Latest Announcement
 1. (3/25) When you run judger, please set 0.2 instead of 0.5 as the alpha of whole arithmetic. But you can test other values as your experiment and write the result and analysis in your report.
-2. (3/24) The `testcase/*.out` is released, and here's a typo in `09.in` and `judger.py`, please pull the new version using:
+2. (3/25) The `testcase/*.out` is released, and here's a typo in `09.in` and `judger.py`, please pull the new version using:
     ```bash
     git pull origin main
     ```
