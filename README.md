@@ -1,13 +1,16 @@
 # EC_hw_2024
 **If you encounter any issues or have any questions regarding this repository, please don't hesitate to open an issue!**
 ## Latest Announcement
-1. (3/24) When you run judger, please set 0.5 as the alpha of whole arithmetic. But you can test other values as your experiment and write the result and analysis in your report.
-2. (3/24) The `testcase/*.out` is released, and here's a typo in `09.in` and `judger.py`, please pull the new version using:
-    ```bash
-    git pull origin main
-    ```
+1. (3/27) When you run judger, please set **0.2** as the alpha of whole arithmetic and set **0.5** as the probability of uniform crossover. But you can test other values as your experiment and write the result and analysis in your report.
 
+3. (3/27) This is the first time we are grading in this manner. If this method of code evaluation truly reflects accuracy, we will continue to use this approach for assessing implementations in the future. Therefore, if you have any questions or encounter any issues, please don't hesitate to ask. Thank you!
+   
 #### Archived Announcement
+(3/25) The `testcase/*.out` is released, and here's a typo in `09.in` and `judger.py`, please pull the new version using:
+```bash
+git pull origin main
+```
+
 (3/19) The release of `testcase/*.out` files will be delayed. Expected upload date: March 24.
 
 ## Sample Code Usage
@@ -100,11 +103,12 @@ Then just print 50.5991.
 
   In `testcase/*.out`, the first line contains two values: the first value is the mean best fitness running by TAs with 120 trials, and the second value is the standard deviation.
   
-  If your fitness is within two standard deviations, it is considered correct.
+  We will run your code for 30 trials and if your mean fitness is within two standard deviations, it is considered correct. 
 #### Judger Usuage
 Place your executable and the judger in the same directory, and run them using `python3 judger.py`. 
 
-Note: The testcase/*.out files have not yet been released, so please refrain from using the python3 judger.py command until they are available.
+It may take a long time to run judge (each testcse will run 30 trials), so be patient!
+
 ## Grading 
 - Coding (30%)
   - Simple test: each failed testcase deducts 1 point (10%)
@@ -118,4 +122,5 @@ Note: The testcase/*.out files have not yet been released, so please refrain fro
     - Incorrect filename (-3)
       - executable file: main or main.py
       - report: report.pdf
+
 - Report (70%)
