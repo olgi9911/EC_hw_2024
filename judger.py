@@ -1,16 +1,34 @@
 import subprocess
 import numpy as np
 import os
+import platform
 
-test_num = 1
+test_num = 30
 
 GREEN = '\033[92m'
 RED = '\033[91m'
 RESET = '\033[0m'
 
+system_os = platform.system()
+executable = None
+if system_os == "Windows":
+    if os.path.exists(".\\main.exe"):
+        executable = ".\\main.exe"
+    elif os.path.exists(".\\main.py"):
+        executable = "python" if os.path.exists("python") else "python3"
+    script_path = None
+elif system_os == "Linux":
+    if os.path.exists("./main"):
+        executable = "./main"
+    elif os.path.exists("./main.py"):
+        executable = "python" if os.path.exists("python") else "python3"
+    script_path = "./main.py" if os.path.exists("./main.py") else None
+
+if executable is None:
+    raise FileNotFoundError("Neither compiled executable nor Python script found.")
 
 def run_test(executable, args, script_path=None):
-    cmd = [executable, script_path] + args
+    cmd = [executable] + args if script_path is None else [executable, script_path] + args
     try:
         process = subprocess.run(cmd, capture_output=True, text=True, check=True)
         float_strs = process.stdout.strip().split()
@@ -43,17 +61,6 @@ def test_student_code(test_input_file, test_output_file, executable):
         result = f"{test_input_file:<10} {RED}Wrong (Calculated Mean: {calculated_mean}, Expected Mean: {expected_mean}, Std Dev: {expected_std_dev}){RESET}"
         # print(f"Test {test_input_file}: {result} (Calculated Mean: {calculated_mean}, Expected Mean: {expected_mean}, Std Dev: {expected_std_dev})")
     print(result)
-
-executable_path = "./main"
-script_path = "main.py"
-if os.path.exists(executable_path):
-    executable = [executable_path]
-    script_path = None
-elif os.path.exists(script_path):
-    executable = "python3"
-else:
-    raise FileNotFoundError("Neither compiled executable nor Python script found.")
-
 
 for i in range(1, 11):
     test_input_file = f"testcase/{i:02d}.in"
