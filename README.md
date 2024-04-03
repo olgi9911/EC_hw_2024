@@ -2,7 +2,7 @@
 **If you encounter any issues or have any questions regarding this repository, please don't hesitate to open an issue!**
 ## Latest Announcement
 1. (4/3) Update `judger.py` and `cpp/Makefile`
-2. (4/2) `judger.py` has some error when execute python code, already fix it.
+2. (4/2) `judger.py` has some error when execute python code, already fixed it.
   
 #### Archived Announcement
 (3/27) This is the first time we are grading in this manner. If this method of code evaluation truly reflects accuracy, we will continue to use this approach for assessing implementations in the future. Therefore, if you have any questions or encounter any issues, please don't hesitate to ask. Thank you!
