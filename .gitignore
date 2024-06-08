@@ -1,0 +1,5 @@
+__pycache__/
+*.sh
+b_*.py
+r_*.py
+*.png
